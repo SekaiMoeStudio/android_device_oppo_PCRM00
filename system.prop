@@ -1,0 +1,10 @@
+# Bluetooth
+ro.bluetooth.library_name=libbluetooth_qti.so
+
+# CNE
+persist.vendor.cne.feature=1
+
+# Media
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+
+ro.vendor.qti.va_aosp.support=1

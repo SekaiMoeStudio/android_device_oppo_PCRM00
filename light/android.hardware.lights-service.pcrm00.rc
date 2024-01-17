@@ -1,0 +1,9 @@
+on boot
+    chown system system /sys/class/backlight/panel0-backlight/brightness
+    chown system system /sys/class/backlight/panel0-backlight/max_brightness
+
+service vendor.lights /system/bin/hw/android.hardware.lights-service.pcrm00
+    class hal
+    user system
+    group system
+    shutdown critical
