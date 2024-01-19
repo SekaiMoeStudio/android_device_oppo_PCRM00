@@ -145,6 +145,9 @@ PRODUCT_PACKAGES += \
     init.cust.rc
 
 # Display
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
+
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
@@ -152,7 +155,6 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service \
     gralloc.lito \
     libdisplayconfig.qti \
-    libdisplayconfig.qti.vendor \
     libqdMetaData \
     libsdmcore \
     libsdmutils \
@@ -230,12 +232,29 @@ PRODUCT_PACKAGES += \
     vndservicemanager
 
 # WiFi
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
+    frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
+    frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
+    frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
+
 PRODUCT_PACKAGES += \
+    android.hardware.wifi-service \
+    android.hardware.wifi.hostapd@1.0.vendor \
+    hostapd \
+    libwpa_client \
+    libwifi-hal-ctrl \
+    libwifi-hal-qcom \
     TetheringConfigOverlay \
     WifiOverlay
 
-# Inherit from the proprietary files makefile.
-$(call inherit-product, vendor/oppo/PCRM00/PCRM00-vendor.mk)
+# WiFi Display
+PRODUCT_PACKAGES += \
+    libnl \
+    libwfdaac_vendor
+
+PRODUCT_BOOT_JARS += \
+    WfdCommon
 
 # IME Input
 PRODUCT_PACKAGES += \
@@ -249,3 +268,6 @@ PRODUCT_PACKAGES += \
     qti-telephony-hidl-wrapper \
     qti-telephony-utils \
     telephony-ext
+
+# Inherit from the proprietary files makefile.
+$(call inherit-product, vendor/oppo/PCRM00/PCRM00-vendor.mk)
