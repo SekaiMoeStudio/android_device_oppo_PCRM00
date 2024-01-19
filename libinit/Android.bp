@@ -5,7 +5,7 @@
 //
 
 cc_library_static {
-    name: "libinit_oppo_kona",
+    name: "libinit_oppo_pcrm00",
     srcs: [
         "libinit_variant.cpp",
         "libinit_utils.cpp",
@@ -16,7 +16,7 @@ cc_library_static {
 }
 
 cc_library_static {
-    name: "init_oppo_kona",
+    name: "init_oppo_pcrm00",
     srcs: ["init_realme_kona.cpp"],
     whole_static_libs: ["libinit_realme_kona"],
     include_dirs: ["system/core/init"],
