@@ -137,7 +137,8 @@ PRODUCT_PACKAGES += \
     init.oplus.rc \
     init.qcom.post_boot.sh \
     init.qcom.recovery.rc \
-    ueventd.oplus.rc
+    ueventd.oplus.rc \
+    init.cust.rc
 
 # Display
 PRODUCT_PACKAGES += \
