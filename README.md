@@ -1,4 +1,4 @@
-Device configuration for OPPO Reno3 Pro
+Device configuration for OPPO Reno3 Pro 5G
 =========================================
 
 ## Device specifications
