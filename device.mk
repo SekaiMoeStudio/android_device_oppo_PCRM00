@@ -267,5 +267,9 @@ PRODUCT_PACKAGES += \
     qti-telephony-utils \
     telephony-ext
 
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.0-service-sdm
+
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oppo/PCRM00/PCRM00-vendor.mk)
