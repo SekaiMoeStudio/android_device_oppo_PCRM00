@@ -3,10 +3,15 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
+    android.hardware.audio@6.0-impl \
+    android.hardware.audio.effect@6.0-impl \
+    android.hardware.bluetooth.audio-impl \
+    android.hardware.soundtrigger@2.3-impl \
     audio.a2dp.default \
     audio.bluetooth.default \
     audio.r_submix.default \
@@ -92,6 +97,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml
 
+PRODUCT_PACKAGES += \
+    libbluetooth_audio_session \
+    audio.bluetooth.default
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
@@ -122,7 +131,9 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
-    com.gsma.services.nfc  \
+    netutils-wrapper-1.0 \
+    android.hardware.nfc_snxxx@1.2-service \
+    com.gsma.services.nfc \
     NfcNci \
     SecureElement \
     Tag
@@ -164,6 +175,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
+    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-service_64
 
 # fastbootd
 PRODUCT_PACKAGES += \
@@ -172,6 +185,8 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
+    android.hardware.gnss@2.1-impl-qti \
+    android.hardware.gnss@2.1-service-qti \
     libbatching \
     libgeofencing \
     libgnss \
@@ -189,7 +204,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl 
+    android.hardware.camera.provider@2.4-impl \
+    android.hardware.gnss@2.1-impl-qti \
+    android.hardware.gnss@2.1-service-qti
 
 PRODUCT_PACKAGES += \
     GCamGOPrebuilt
@@ -257,6 +274,13 @@ PRODUCT_PACKAGES += \
     libjni_latinimegoogle
 
 TARGET_EXCLUDES_AUDIOFX := true
+
+# Sonsors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@2.0-service.multihal
+
+PRODUCT_PACKAGES += \
+    libsensorndkbridge
 
 # Telephony
 PRODUCT_PACKAGES += \
