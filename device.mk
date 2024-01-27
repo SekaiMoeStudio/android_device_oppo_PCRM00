@@ -158,7 +158,7 @@ PRODUCT_PACKAGES += \
     libsdmutils \
     libtinyxml \
     libvulkan \
-    memtrack.lito 
+    memtrack.lito
 
 # Health
 PRODUCT_PACKAGES += \
@@ -167,14 +167,15 @@ PRODUCT_PACKAGES += \
 
 # fastbootd
 PRODUCT_PACKAGES += \
-    fastbootd
+    fastbootd \
+    android.hardware.fastboot@1.0-impl-mock
 
 # GPS
 PRODUCT_PACKAGES += \
     libbatching \
     libgeofencing \
     libgnss \
-    libgnsspps 
+    libgnsspps
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -188,8 +189,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service_64 
+    android.hardware.camera.provider@2.4-impl 
 
 PRODUCT_PACKAGES += \
     GCamGOPrebuilt
@@ -238,7 +238,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
-    android.hardware.wifi.hostapd@1.0.vendor \
     hostapd \
     libwpa_client \
     libwifi-hal-ctrl \
@@ -249,7 +248,6 @@ PRODUCT_PACKAGES += \
 # WiFi Display
 PRODUCT_PACKAGES += \
     libnl \
-    libwfdaac_vendor
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
