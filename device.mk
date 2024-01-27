@@ -132,17 +132,15 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.oppo_pcrm00
 
 PRODUCT_PACKAGES += \
-    init.class_main.sh \
-    init.qcom.early_boot.sh \
-    init.qcom.rc \
-    init.qcom.sh \
-    ueventd.qcom.rc \
-    fstab.qcom \
     init.oplus.rc \
-    init.qcom.post_boot.sh \
+    init.qcom.rc \
     init.qcom.recovery.rc \
+    init.qcom.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.early_boot.sh \
+    init.class_main.sh \
     ueventd.oplus.rc \
-    init.cust.rc
+    init.oplus.rc
 
 # Display
 PRODUCT_COPY_FILES += \
