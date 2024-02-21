@@ -103,7 +103,9 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/oplus \
+    hardware/qcom
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -304,6 +306,40 @@ PRODUCT_COPY_FILES += \
 # LiveDisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sdm
+
+# Vendor packages
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0.vendor \
+    android.hardware.usb@1.3.vendor \
+    android.hardware.usb.gadget@1.1.vendor
+    android.hardware.tetheroffload.config@1.0.vendor \
+    android.hardware.tetheroffload.control@1.1.vendor \
+    android.frameworks.sensorservice@1.0.vendor \
+    android.hardware.neuralnetworks@1.3.vendor \
+    libtextclassifier_hash.vendor \
+    android.hardware.bluetooth@1.1.vendor \
+    android.hardware.camera.device@3.6.vendor \
+    android.hardware.camera.provider@2.6.vendor
+    android.hardware.graphics.allocator@4.0.vendor \
+    libdrm.vendor \
+    android.hardware.drm@1.4.vendor \
+    android.hardware.gnss.measurement_corrections@1.1.vendor \
+    android.hardware.gnss.visibility_control@1.0.vendor \
+    android.hardware.gnss-V1-ndk.vendor \
+    android.hardware.gnss@2.1.vendor
+    libhidltransport.vendor \
+    libhwbinder.vendor \
+    android.hardware.keymaster@4.1.vendor \
+    libkeymaster4_1support.vendor \
+    libkeymaster41.vendor \
+    libpuresoftkeymasterdevice.vendor \
+    libsoft_attestation_cert.vendor
+    libavservices_minijail_vendor \
+    libcodec2_hidl@1.2.vendor \
+    libcodec2_soft_common.vendor \
+    libsfplugin_ccodec_utils.vendor \
+    libstagefright_softomx_plugin.vendor \
+    libaudiofoundation.vendor
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oppo/PCRM00/PCRM00-vendor.mk)
