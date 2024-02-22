@@ -6,7 +6,7 @@ odm/etc/acdbdata/Handset_cal.acdb
 odm/etc/acdbdata/Hdmi_cal.acdb
 odm/etc/acdbdata/Headset_cal.acdb
 odm/etc/acdbdata/Speaker_cal.acdb
-vendor/etc/acdbdata/adsp_avs_config.acdb:odm/etc/acdbdata/adsp_avs_config.acdb
+vendor/etc/acdbdata/adsp_avs_config.acdb
 
 #ACDBLoader
 vendor/lib64/libacdb-fts.so
@@ -17,7 +17,6 @@ vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
 
 #ADSP
-odm/lib64/libadsprpc.so
 vendor/bin/adsprpcd
 vendor/bin/dspservice
 vendor/etc/init/vendor.qti.adsprpc-service.rc
@@ -369,7 +368,6 @@ odm/lib64/libarcsoft_smart_denoise.so
 odm/lib64/libarcsoft_super_night_raw.so
 odm/lib64/libCOppLceTonemapAPI.so
 odm/lib64/libc++_shared.so
-odm/lib64/libcvface_api.so
 odm/lib64/libDeVIS.so
 odm/lib64/libEIS.so
 odm/lib64/libhwconfigurationutil.so
@@ -494,7 +492,6 @@ vendor/etc/init/vendor.qti.cdsprpc-service.rc
 vendor/lib64/libcdfw.so
 vendor/lib64/libcdfw_remote_api.so
 vendor/lib64/libcdsp_default_listener.so
-odm/lib64/libcdsprpc.so
 vendor/lib64/libcdsprpc.so
 vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
@@ -1133,7 +1130,7 @@ vendor/radio/qcril_database/upgrade/3_version_update_wps_config.sql
 vendor/radio/qcril_database/upgrade/4_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql
-odm/etc/vintf/manifest_dsds.xml:odm/etc/vintf/manifest/manifest_dsds.xml
+odm/etc/vintf/manifest_dsds.xml
 
 #Telephony(qti-telephony-common)-fromDRG-QKQ1.190828.002
 system_ext/framework/qti-telephony-common.jar|b4d187700f279cdbd40e74b4c3be4504f10d8b29
