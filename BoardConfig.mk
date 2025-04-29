@@ -95,7 +95,6 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
-TARGET_USE_QTI_BT_STACK := true
 
 # HIDL
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml

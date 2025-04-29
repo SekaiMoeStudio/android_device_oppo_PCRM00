@@ -1217,6 +1217,17 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 
+# IMS
+system_ext/lib64/lib-imsvideocodec.so
+system_ext/lib64/lib-imsvt.so
+system_ext/lib64/lib-imsvtextutils.so
+system_ext/lib64/lib-imsvtutils.so
+system_ext/lib64/libdiag_system.so
+system_ext/lib64/libimscamera_jni.so
+system_ext/lib64/libimsmedia_jni.so
+system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
+-system_ext/priv-app/ims/ims.apk
+
 #Secureelement
 odm/bin/hw/vendor.qti.secure_element@1.2-service
 odm/etc/init/vendor.qti.secure_element@1.2-service.rc
